@@ -1,0 +1,16 @@
+# VS Code
+.vscode/
+
+# Virtualenv
+include/
+lib/
+bin/
+
+# Data - ignore content
+data/*
+
+# Data - but keep folder
+!data/.gitkeep 
+
+# OS
+.DS_Store
