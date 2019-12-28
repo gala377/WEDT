@@ -6,6 +6,8 @@ from functools import reduce
 tmp_files = ['.DS_Store']
 pool = ThreadsPool()
 
+os.mkdir('data/sql') if os.path.isdir('data/sql') is False else None
+
 generation_type = sys.argv[1]
 if generation_type == 'short':
   files_dir = 'data/text/short'
