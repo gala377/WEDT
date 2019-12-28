@@ -23,6 +23,22 @@ create table {table_name} (
 CREATE INDEX {table_name}_idx ON {table_name}(txt) INDEXTYPE IS CTXSYS.CONTEXT;
 """.format(table_name=table_name)
 
+elif generation_type == 'short-clob':
+  files_dir = 'data/text/short'
+  sql_file = 'data/sql/generate_short_clob.sql'
+  table_name = 'small_clob'
+  create_table = """
+SET DEFINE OFF;
+
+create table {table_name} (
+  id number primary key,
+  txt CLOB not null,
+  txt_no_idx CLOB not null
+);
+
+CREATE INDEX {table_name}_idx ON {table_name}(txt) INDEXTYPE IS CTXSYS.CONTEXT;
+""".format(table_name=table_name)
+
 elif generation_type == 'medium':
   files_dir = 'data/text/medium'
   sql_file = 'data/sql/generate_medium.sql'
@@ -56,7 +72,7 @@ CREATE INDEX {table_name}_idx ON {table_name}(txt) INDEXTYPE IS CTXSYS.CONTEXT;
 """.format(table_name=table_name)
 
 else:
-  raise ValueError('Unsupported generation type {}. Supported types are: short, medium, long'.format(generation_type))
+  raise ValueError('Unsupported generation type {}. Supported types are: short, short-clob, medium, long'.format(generation_type))
 
 
 insert_command_template = """insert into {table_name} (id, txt, txt_no_idx) values ({id}, '{value}', '{value}');

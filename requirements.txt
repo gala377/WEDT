@@ -1,0 +1,9 @@
+certifi==2019.11.28
+chardet==3.0.4
+filelock==3.0.12
+gdown==3.8.3
+idna==2.8
+requests==2.22.0
+six==1.13.0
+tqdm==4.41.0
+urllib3==1.25.7
