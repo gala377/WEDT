@@ -14,3 +14,14 @@ data/*
 
 # OS
 .DS_Store
+
+# Oracle
+cx_Oracle-doc
+
+# Benchmark results and scripts
+benchmarks/*.txt
+benchmarks/*.sh
+
+
+# Results
+results

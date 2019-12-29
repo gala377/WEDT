@@ -12,7 +12,7 @@ generation_type = sys.argv[1]
 if generation_type == 'short':
   files_dir = 'data/text/short'
   sql_file = 'data/sql/generate_short.sql'
-  table_name = 'small_varchar2'
+  table_name = 'short'
   create_table = """
 SET DEFINE OFF;
 
@@ -28,7 +28,7 @@ CREATE INDEX {table_name}_idx ON {table_name}(txt) INDEXTYPE IS CTXSYS.CONTEXT;
 elif generation_type == 'short-clob':
   files_dir = 'data/text/short'
   sql_file = 'data/sql/generate_short_clob.sql'
-  table_name = 'small_clob'
+  table_name = 'short_clob'
   create_table = """
 SET DEFINE OFF;
 
