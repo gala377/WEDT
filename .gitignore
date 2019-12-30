@@ -1,5 +1,7 @@
 # VS Code
 .vscode/
+# PyCharm
+.idea/
 
 # Virtualenv
 include/
