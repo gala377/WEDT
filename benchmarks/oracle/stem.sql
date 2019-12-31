@@ -2,7 +2,7 @@ set timing on;
 
 -- Log name convention: {operation name}_{with idx or not}_{table-name}.log
 
-spool stem_idx_short.txt
+\ stem_idx_short.txt
 select * from short where contains(txt, '$sing', 1) > 0;
 select * from short where contains(txt, '$sing', 1) > 0;
 select * from short where contains(txt, '$sing', 1) > 0;
